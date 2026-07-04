@@ -1,32 +1,42 @@
 # ChangeLog
 
+## [2.9.0] - 2026-07-04
+
+- Hide quick tools in diff view
+- Hide keyboard input in diff view
+- Added dynamic responsive overflow for the repository action
+  toolbar: when the sidebar narrows and there isn't enough horizontal
+  room for all primary/navigation actions, the ones that don't fit are
+  moved into the secondary "more actions" (⋮) menu, and automatically
+  reappear inline once space is available again.
+
 ## [2.8.0] - 2026-07-01
 
 - Added readonly CodeMirror diff support with CodeMirror external dependency handling and merge view styling by [@bajrangCoder](https://github.com/bajrangCoder)
 - Added secure Git credential storage using the Acode plugin context for askpass by [@bajrangCoder](https://github.com/bajrangCoder)
 - Updated project documentation
 
-## [2.7.1] - 2026-26-06
+## [2.7.1] - 2026-06-26
 
 - Added new setting: `showCommitHistoryResourceGroup` default=true
 - Fixed errors like: `find: .: Permission denied`
 
-## [2.7.0] - 2026-26-06
+## [2.7.0] - 2026-06-26
 
 - Added commit history feature with detailed commit view and resource management by [@UnschooledGamer](https://github.com/UnschooledGamer)
 
-## [2.6.1] - 2026-21-06
+## [2.6.1] - 2026-06-21
 
 - Add 'add to .gitignore' scm menu for CodeMirror
 - Fixed badge decoration tab file missing
 
-## [2.6.0] - 2026-18-06
+## [2.6.0] - 2026-06-18
 
 - Added folder decorations for file
 - Add emphasized dot badge for folders.
 - Fixed missing decorations on nested subfolders after collapse/expand
 
-## [2.5.0] - 2026-10-06
+## [2.5.0] - 2026-06-10
 
 - Full worktree management: add, detect, open, and delete worktrees directly from the SCM view, with dedicated icons per worktree
 - Touch Swipe-Right Selection gesture support for selecting list items and repositories in the SCM view;
@@ -39,21 +49,21 @@
 - Fixed an issue where the repository failed to auto-initialize when `git.enabled` was true.
 - Fixed some bugs
 
-## [2.4.0] - 2026-23-05
+## [2.4.0] - 2026-05-23
 
 ### Add support for CodeMirror:
 
 - Remove `Add to .gitignore` menu
 - Diff is not supported in CodeMirror version
 
-## [2.3.1] - 2026-21-02
+## [2.3.1] - 2026-02-21
 
 - Improve and optimized file tree and file tab decoration
 - Added new setting `Git: Refresh On Save File` which when enabled will automatically update the repository with changes. Default to `false` (You can enable this in Git SCM settings)
 - Added new setting `Git: Show Decorations In File Tree` to control file decoration in the file tree/file explorer
 - Optimized performance and stability
 
-## [2.3.0] - 2026-19-02
+## [2.3.0] - 2026-02-19
 
 - Remove `inotifywait` file watcher and automatic repository refresh on file save for improved performance (Currently, when saving a file and if the file is in the repository, the plugin will automatically update the file. For other changes such as new files, deleted files, changes outside the Acode application or others, you must refresh manually for the changes to take effect)
 - SCM repository now auto-updates when git commands (add, commit, pull, push, etc.) are executed in the terminal
@@ -62,19 +72,19 @@
 - Fixed decoration files persist even if the repository is closed
 - Fixed configuration issues during plugin updates
 
-## [2.2.4] - 2026-18-02
+## [2.2.4] - 2026-02-18
 
 - Improve file tree decoration
 - Fix loss of decoration when folder is expanded/collapsed
 - Fixed decoration still shows after commits/discard changes
 - Fixed several bugs related to file decoration
 
-## [2.2.3] - 2026-09-02
+## [2.2.3] - 2026-02-09
 
 - Refined UI decorations and styling
 - Optimized performance and stability
 
-## [2.2.2] - 2026-29-01
+## [2.2.2] - 2026-01-29
 
 - Optimized performance and stability
 - Fixed some bugs

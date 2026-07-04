@@ -179,6 +179,9 @@ export class UnifiedDiff {
         },
       }),
       EditorState.readOnly.of(true),
+      EditorView.contentAttributes.of({
+        inputmode: "none"
+      })
     ];
 
     const editorView = new EditorView({
@@ -195,6 +198,7 @@ export class UnifiedDiff {
       render: true,
       isUnsaved: false,
       editable: false,
+      hideQuickTools: true
     });
 
     diffEditorFile.diff = {
