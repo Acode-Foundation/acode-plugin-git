@@ -92,7 +92,7 @@ const defaultGitConfig: IGitConfig = {
 	optimisticUpdate: true,
 	detectWorktrees: false,
 	detectWorktreesLimit: 20,
-	showCommitHistoryResourceGroup: true
+	showCommitHistoryResourceGroup: false
 }
 
 async function destroy() {
@@ -342,7 +342,7 @@ function initializeViews(scmViewContainer: SourceControlViewContainer): void {
 	});
 
 	scmViewContainer.registerViewWelcomeContent({
-		content: 'In order to use Git features, you can open a folder containing a Git repository or clone from a URL.\n[Open Folder](command:openFolder)\n[Clone Repository](command:git.cloneRecursive)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro#README).',
+		content: 'In order to use Git features, you can open a folder containing a Git repository or clone from a URL.\n[Open Folder](command:openFolder)\n[Clone Repository](command:git.cloneRecursive)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro/blob/main/docs/overview.md).',
 		when: () => config.get('vcgit')?.enabled === true
 			&& !App.getContext<boolean>('acode.terminalMissing')
 			&& !App.getContext<boolean>('git.missing')
@@ -361,14 +361,14 @@ function initializeViews(scmViewContainer: SourceControlViewContainer): void {
 	});
 
 	scmViewContainer.registerViewWelcomeContent({
-		content: 'Install Git, a popular source control system, to track code changes and collaborate with others. Learn more in our [Git guides](https://github.com/dikidjatar/acode-plugin-version-control-gitpro#README).',
+		content: 'Install Git, a popular source control system, to track code changes and collaborate with others. Learn more in our [Git guides](https://github.com/dikidjatar/acode-plugin-version-control-gitpro/blob/main/docs/overview.md).',
 		when: () => config.get('vcgit')?.enabled === true
 			&& !App.getContext<boolean>('acode.terminalMissing')
 			&& App.getContext<boolean>('git.missing') === true
 	});
 
 	scmViewContainer.registerViewWelcomeContent({
-		content: "The folder currently open doesn't have a Git repository. You can initialize a repository which will enable source control features powered by Git.\n[Initialize Repository](command:git.init?%5Btrue%5D)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro#README).",
+		content: "The folder currently open doesn't have a Git repository. You can initialize a repository which will enable source control features powered by Git.\n[Initialize Repository](command:git.init?%5Btrue%5D)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro/blob/main/docs/overview.md).",
 		when: () => config.get('vcgit')?.enabled === true
 			&& !App.getContext<boolean>('acode.terminalMissing')
 			&& !App.getContext<boolean>('git.missing')
@@ -380,7 +380,7 @@ function initializeViews(scmViewContainer: SourceControlViewContainer): void {
 	});
 
 	scmViewContainer.registerViewWelcomeContent({
-		content: 'A Git repository was found that was previously closed.\n[Reopen Closed Repository](command:git.reopenClosedRepositories)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro#README).',
+		content: 'A Git repository was found that was previously closed.\n[Reopen Closed Repository](command:git.reopenClosedRepositories)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro/blob/main/docs/overview.md).',
 		when: () => config.get('vcgit')?.enabled === true
 			&& !App.getContext<boolean>('git.missing')
 			&& App.getContext<'initialized' | 'uninitialized'>('git.state') === 'initialized'
@@ -388,7 +388,7 @@ function initializeViews(scmViewContainer: SourceControlViewContainer): void {
 	});
 
 	scmViewContainer.registerViewWelcomeContent({
-		content: 'Git repositories were found that were previously closed.\n[Reopen Closed Repositories](command:git.reopenClosedRepositories)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro#README).',
+		content: 'Git repositories were found that were previously closed.\n[Reopen Closed Repositories](command:git.reopenClosedRepositories)\nTo learn more about how to use Git and source control in Acode [read our docs](https://github.com/dikidjatar/acode-plugin-version-control-gitpro/blob/main/docs/overview.md).',
 		when: () => config.get('vcgit')?.enabled === true
 			&& !App.getContext<boolean>('git.missing')
 			&& App.getContext<'initialized' | 'uninitialized'>('git.state') === 'initialized'

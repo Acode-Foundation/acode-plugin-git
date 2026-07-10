@@ -1,5 +1,10 @@
 # ChangeLog
 
+## [2.9.1] - 2026-07-10
+
+- Fixed diff truncated/invalid output and enhance diff view styling
+- Update docs link
+
 ## [2.9.0] - 2026-07-04
 
 - Hide quick tools in diff view
