@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [2.9.2] - 2026-07-19
+
+- Added SSH passphrase support for integrated SSH_ASKPASS by [@vamsi-krishna2580](http://github.com/vamsi-krishna2580)
+
 ## [2.9.1] - 2026-07-10
 
 - Fixed diff truncated/invalid output and enhance diff view styling
